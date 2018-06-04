@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Chiphy</string>
+
+    <string name="gif_size">%dKB</string>
+    <string name="gif_search">Search</string>
+    <string name="gif_search_no_found">Nothing found</string>
+    <string name="gif_search_error">Error occurred\nRestart app</string>
+    <string name="gif_search_loading">Loading…</string>
+    <string name="gif_start_search">Start search on Giphy</string>
+</resources>

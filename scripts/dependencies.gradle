@@ -1,0 +1,93 @@
+ext {
+    gradlePluginVer = "3.1.2"
+    supportLibVer = "27.1.1"
+    databindingVer = "3.1.2"
+    lifecycleVer = "1.0.0"
+    constraintVer = "1.0.2"
+    kotlinVer = "1.2.41"
+    rxJavaVer = "2.1.14"
+    rxAndroidVer = "2.0.2"
+    permissionDispatcherVer = "2.4.0"
+    preferenceFixVer = "27.0.2.0"
+    retrofitVer = "2.3.0"
+    okHttp3Ver = "3.6.0"
+    roomVer = "1.0.0"
+    ciceroneVer = "3.0.0"
+    moxyVer = "1.5.3"
+    lifecycleVer = "1.1.1"
+    toothpickVer = "1.1.3"
+    daggerVer = "2.16"
+    timberVer = "4.7.0"
+    glideVer = "4.7.1"
+
+    android = [
+            gradle :        "com.android.tools.build:gradle:${gradlePluginVer}",
+    ]
+
+
+    support = [
+            appCompat :     "com.android.support:design:${supportLibVer}",
+            constraint :    "com.android.support.constraint:constraint-layout:${constraintVer}"
+    ]
+
+    databinding = [
+            compiler :      "com.android.databinding:compiler:${databindingVer}"
+    ]
+
+    lifecycle = [
+            extensions :    "android.arch.lifecycle:extensions:${lifecycleVer}",
+            compiler :      "android.arch.lifecycle:compiler:${lifecycleVer}"
+    ]
+
+    kotlin = [
+            stdlib :        "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVer}",
+            plugin :        "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVer}"
+    ]
+
+    network = [
+            retrofit :      "com.squareup.retrofit2:retrofit:${retrofitVer}",
+            converterGson : "com.squareup.retrofit2:converter-gson:${retrofitVer}",
+            rx :            "com.squareup.retrofit2:adapter-rxjava2:${retrofitVer}",
+            logging :       "com.squareup.okhttp3:logging-interceptor:${okHttp3Ver}"
+    ]
+
+    rx = [
+            rxJava :        "io.reactivex.rxjava2:rxjava:${rxJavaVer}",
+            rxAndroid :     "io.reactivex.rxjava2:rxandroid:${rxAndroidVer}"
+    ]
+
+    room = [
+            runtime :       "android.arch.persistence.room:runtime:${roomVer}",
+            compiler :      "android.arch.persistence.room:compiler:${roomVer}",
+            rx :            "android.arch.persistence.room:rxjava2:${roomVer}"
+    ]
+
+    cicerone = [
+            runtime :       "ru.terrakok.cicerone:cicerone:${ciceroneVer}"
+    ]
+
+    moxy = [
+            runtime :       "com.arello-mobile:moxy-app-compat:${moxyVer}",
+            compiler :      "com.arello-mobile:moxy-compiler:${moxyVer}"
+    ]
+
+    toothpick = [
+            runtime :       "com.github.stephanenicolas.toothpick:toothpick-runtime:${toothpickVer}",
+            compiler :      "com.github.stephanenicolas.toothpick:toothpick-compiler:${toothpickVer}"
+    ]
+
+    dagger = [
+            runtime :       "com.google.dagger:dagger:${daggerVer}",
+            compiler :      "com.google.dagger:dagger-compiler:${daggerVer}"
+    ]
+
+
+    timber = [
+            runtime :       "com.jakewharton.timber:timber:${timberVer}"
+    ]
+
+    glide = [
+            runtime :       "com.github.bumptech.glide:glide:${glideVer}",
+            compiler :      "com.github.bumptech.glide:compiler:${glideVer}"
+    ]
+}

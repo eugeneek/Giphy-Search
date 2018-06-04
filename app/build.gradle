@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$project.rootDir/scripts/script-git-version.gradle"
+apply from: "$project.rootDir/scripts/dependencies.gradle"
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.parapaparam.chiphy"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode getVersionCode()
+        versionName getVersionName()
+
+        vectorDrawables.useSupportLibrary true
+
+        // Giphy API_KEY
+        def properties = new Properties()
+        properties.load(new FileInputStream(rootProject.file("app.properties")))
+        buildConfigField "String", "API_KEY_GIPHY", "\"$properties.API_KEY_GIPHY\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // Kotlin
+    implementation kotlin.stdlib
+
+    // Support
+    implementation support.appCompat
+
+    // Mvp
+    implementation moxy.runtime
+    kapt moxy.compiler
+
+    // Network
+    implementation network.retrofit
+    implementation network.converterGson
+    implementation network.rx
+    implementation network.logging
+
+    // RxJava
+    implementation rx.rxJava
+    implementation rx.rxAndroid
+
+    // DI
+    implementation dagger.runtime
+    kapt dagger.compiler
+
+    // Image loader
+    implementation glide.runtime
+    kapt glide.compiler
+
+    // Logging
+    implementation timber.runtime
+}
